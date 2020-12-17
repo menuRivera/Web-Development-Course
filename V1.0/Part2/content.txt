@@ -1,0 +1,49 @@
+JavaScript basics {
+    linking js files in html
+    variables
+    arrays
+    loops
+    objects
+    functions
+}
+DOM manipultion {
+    Document Object Model
+    selector methods
+    events {
+        event reference (mdn)
+    }
+}
+jQuery {
+    Selecting items {
+        $("cssSelector").method();
+    }
+    Methods {
+        .attr() :: change attributes from an html element (like type)
+        .css() ::  change styles {
+            -you can actually create an object with all the styles you want to modify and set it as an argument (use camelCase instead of dash-case)
+        }
+        .text() :: just like textContent()
+        .html() :: just like innerHtml()
+        .click() :: click listener 
+        .on() :: equals addEventListener()
+        .append() :: adds a child element at the end
+        .prepend() :: adds a child element at the beginning
+        .parent() :: selects the parent element
+        event.stopPropagation() :: stops the bubbling effect (clicks also triggers parents clicking)
+    }
+    Effects {
+        .fadeOut()
+        .fadeIn()
+        .fadeToggle()
+
+        .slideDown()
+        .slideUp() 
+        .slideToggle()
+    }
+    this {
+        $(this)
+    }
+}
+Paper.js
+Howler.js
+

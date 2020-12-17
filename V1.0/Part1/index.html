@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--this is a comment-->
+	<!--Metadata goes here-->
+	<link rel="stylesheet" href="style.css">
+	<title>First html page</title>
+</head>
+
+<body>
+	<!--Content goes here-->
+	<h2>HTML</h2>	
+
+	<!--Paragraphs-->
+	<!--the <b> and <strong> tags are pretty much the same-->
+	<h4>Paragraphs</h4>
+	<p><b>Lorem</b> ipsum dolor sit, amet consectetur adipisicing elit.
+		Consequuntur voluptatum tenetur tempore repellat libero 
+		eligendi quo, incidunt quam doloribus veniam odit ducimus 
+		reiciendis itaque saepe explicabo delectus nostrum illo <strong>temporibus</strong>.
+	</p>
+	<!--the <i> and <em> tags are pretty much the same-->
+	<p>This is <em>another paragraph</em> brou, look at this
+		<i>fdsafdsafds</i>
+	</p>
+
+	<!--Div is a block level generic container, while span is a in-line generic
+	container. Thats the dif between them-->
+
+	<h4>Animals lists</h4>
+	<ol>
+		<li>Perro</li>
+		<li>Gato
+			<ul>
+				<li>Gato noble</li>
+				<li>Gato bravo</li>
+			</ul>
+		</li>
+		<li>Tigre</li>
+	</ol>
+	<ul>
+		<li>Perro</li>
+		<li>Gato</li>
+		<li>Tigre</li>
+	</ul>
+	<!-- Links ma men -->
+	<h4>Links</h4>
+	<!-- <a href="http://www.google.com">Google main page<br></a> -->
+	<a href="../Part1/html/RegisterExercise.html">Register exercise</a>
+	<br>
+	<a href="../Part1/html/SelectorsExercise.html">Selector exercise (css)</a>
+	<br>
+	<a href="../Part1/html/Fonts.html">Fonts exercise</a>
+	<br>
+	<a href="../Part1/html/TicTacToe.html">TicTacToe</a>
+	<br>
+	<a href="../Part1/html/ImageGallery.html">Image gallery</a>
+	<br>
+	<a href="../Part1/html/Blog.html">Blog</a>
+	<br>
+	<h5>Bootstrap 3</h5>
+	<a href="../Part1/html/BootstrapBasics.html">BootstrapBasics</a>
+	<br>
+	<a href="../Part1/html/ImageGalleryBS.html">Image Gallery w BS</a>
+	<br>
+	<a href="../Part1/html/LandingPage.html">LandingPage</a>
+	<br>
+	<h5>Bootstrap 4</h5>
+	<a href="../Part1/html/Bootstrap4Basics.html">Bootstrap 4 basics</a>
+	<br>
+	<a href="../Part1/html/CardsExample.html">Cards example</a>
+	<br>
+	<a href="../Part1/html/MuseumOfCandy.html">Museum Of Candy</a>
+	<br>
+	<a href="../Part2/index.html">index 2</a>
+	
+	<h4>Images</h4>
+	<img width="50" src="https://icons.iconseeker.com/png/fullsize/dhri-no-63/cute-little-low-res-chicken.png">
+
+	<h4>Tables</h4>
+	<table>
+		<thead>		
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Breed</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Doddy</td>
+			<td>5</td>
+			<td>Chihuahua</td>
+		</tr>
+		<tr>
+			<td>Shakira</td>
+			<td>8</td>
+			<td>Callejera</td>
+		</tr>
+		</tbody>
+
+
+	</table>
+
+	<h4>Forms, inputs and validations</h4>	
+	<!--action attribute is where the form send data to-->
+	<!-- method attribute is what http method to use (get/post)-->
+	<!-- <form> 
+		<label>
+			Username: 
+			<input type="text" placeholder="username">
+		</label>
+		<label>
+			Password:
+			<input type="password" placeholder="password">
+		</label>		
+		<input type="submit">
+	</form> -->
+	<!-- Another way of labeling inputs -->
+	<form>
+		<label for="email">Email:</label>
+		<input id="email" type="email" placeholder="email" required>
+		<label for="password">Password:</label>
+		<input id="passwords" type="text" placeholder="password" required>
+		<input type="submit">
+	</form>
+
+	<p>Do you prefer cats or dogs?</p>
+	<form>
+		<label for="dogs">Dogs:</label>
+		<input type="radio" name="petChoice" id="dogs" value="dog">
+		
+		<label for="cats">Cats:</label>
+		<input type="radio" name="petChoice" id="cats" value="cat">
+
+		<p>Whats your current mood?</p>
+		<select name="mood">
+			<option value="happy">:)</option>
+			<option value="neutral">:|</option>
+			<option value="sad">:(</option>
+			<option value="mad">>:O</option>
+		</select>
+		<br>
+		<textarea placeholder="Why?" rows="5" cols="20"></textarea>
+		<button>Go</button>
+	</form>
+</body>
+
+</html>

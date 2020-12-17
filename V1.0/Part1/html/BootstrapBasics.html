@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Bootstrap basics</title>
+</head>
+<!-- BODY -->
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- header -->
+      <div class="navbar-header">
+        <!-- collapse button -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <!-- three bars in the button -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- logo -->
+        <a href="#" class="navbar-brand">Bootstrap 3</a>
+      </div>
+      <!-- collapse for mobile devices -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- left side -->
+        <ul class="nav navbar-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- right side -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- GRID SYSTEM -->
+  <!-- We have 12 sections in every container -->
+  <div class="container">
+    <!-- fullscreen in order to see the full layout -->
+    <div class="section">
+      <h1>Grid system</h1>
+      <div class="row">
+        <div class="col-lg-2 grey">col lg 2</div>
+        <div class="col-lg-8 grey">col lg 8</div>
+        <div class="col-lg-2 grey">col lg 2</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 grey">col lg 2</div>
+        <div class="col-lg-2 grey">col lg 2</div>
+        <div class="col-lg-2 grey">col lg 2</div>
+        <div class="col-lg-2 grey">col lg 2</div>
+        <div class="col-lg-2 grey">col lg 2</div>
+        <div class="col-lg-2 grey">col lg 2</div>
+      </div>
+      <div class="row">
+        <div class="grey col-md-3 col-sm-6">
+          <div class="row">
+            <div class="grey col-md-6">Half</div>
+            <div class="grey col-md-6">Half</div>
+          </div>
+        </div>
+        <div class="grey col-md-3 col-sm-6">Responsive example</div>
+        <div class="grey col-md-3 col-sm-6">Responsive example</div>
+        <div class="grey col-md-3 col-sm-6">
+          <div class="row">
+            <div class="col-lg-2 grey">A</div>
+            <div class="col-lg-2 grey">A</div>
+            <div class="col-lg-2 grey">A</div>
+            <div class="col-lg-2 grey">A</div>
+            <div class="col-lg-2 grey">A</div>
+            <div class="col-lg-2 grey">A</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="section">
+      <h1>Basic buttons</h1>
+      <button class="btn btn-success btn-xs">Success</button>
+      <button class="btn btn-danger btn-xs active">Danger</button>
+      <button class="btn btn-success btn-xs" disabled="disabled">Disabled one</button>
+      <a href="http://www.google.com" class="btn btn-info btn-lg">Google</a>
+    </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Jumbotron</h1>
+        <h3><strong>This is inside of a container</strong></h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel repudiandae numquam enim consequuntur omnis
+          exercitationem, adipisci natus, assumenda quas at commodi fuga, accusantium cumque sint sunt soluta animi
+          laboriosam unde!</p>
+        <button class="btn btn-success">hi there</button>
+      </div>
+    </div>
+    <div class="section">
+      <h1>Form example</h1>
+      <h3>Basic form</h3>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <h3>Inline form</h3>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="exampleInputName2">Name</label>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail2">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+        </div>
+        <button type="submit" class="btn btn-default">Send invitation</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+  <a href="../index.html">return</a>
+  <!-- jQuery file always have to be before the bootstrap one -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <!-- Bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>

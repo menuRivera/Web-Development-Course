@@ -1,0 +1,18 @@
+
+/* campgrounds */
+.display-1 {
+    font-weight: 600;
+}
+/* newCampground */
+#newCampForm {
+    width: 30%;
+    margin: 20px auto;
+}
+#newCampForm>input {
+    margin: 10px 0;
+}
+
+#newCampH1 {
+    text-align: center;
+    margin: 30px 0;
+}

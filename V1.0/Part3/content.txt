@@ -1,0 +1,207 @@
+::::::::::::::::::::::::::::::::::::BACKEND::::::::::::::::::::::::::::::::::::
+
+Tools {
+    Postman
+    Heroku (https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+    locus :: debugging tool {
+        eval(require("locus"));
+    }
+}
+HTTP protocol {
+    Requests {
+        GET
+        POST
+        DELETE
+        PATCH
+    }
+    RESTFUL ROUTES {
+        INDEX   /dogs           GET     :: List all dogs
+        NEW     /dogs/new       GET     :: Show new dog form
+        CREATE  /dogs           POST    :: Create a new dog, then redirect somewhere 
+        SHOW    /dogs/:id       GET     :: Show info about one specific dog
+        EDIT    /dogs/:id/edit  GET     :: Show edit form for one dog
+        UPDATE  /dogs/:id       PUT     :: Update a particular dog, then redirect somewhere
+        DESTROY /dogs/:id       DELETE  :: Delete a particular dog, then redirect somewhere
+    }
+}
+Local coding environment {
+    setting the app.listen funct {    
+        var port = process.env.PORT || 3000;
+        app.listen(port, function () {
+            console.log("Server Has Started!");
+        });
+    }
+    command line {
+        bash {
+            (autocompletion using tab)
+            commands {
+                move around {
+                    [ls] && [dir] :: shows everything inside of the current folder/path
+                    [cd] :: get inside a folder
+                    [cd ..] :: go back 
+                    [code <filename>] :: opens file in vscode
+                    [code --help]
+                }      
+                manage files {
+                    [touch] :: create a file
+                    [mkdir] :: create a directory
+                    [rm] :: delete a file
+                    [rm -rf] :: delete a directory
+                    [mv] :: rename || move files
+                }          
+            }
+        }
+    }    
+}
+Node.js {
+    What is? {
+        js runtime.
+        It's a tool to write js code in the server side, not only on the front end.
+    }
+    Why are we learning it? {
+        It's popular
+    }
+    console {
+        commands {
+            [node] :: open the node console
+            [node <filename>] :: run a file
+        }
+    }
+    NPM {
+        Used to add packages/libraries on the server side program
+        commands {
+            [npm install <package-name>] :: installs that package
+            [npm init] :: creates a package.json file
+        }
+        flags {
+            [--save] :: take the package name and version and save it into the package.json file
+            [-g] :: install the package globally in your computer
+        }
+    }
+}
+Express.js {
+    What is? {
+        A lightweight server side framework for web dev.
+    }
+    boilerplate {
+        var express = require("express");
+        var app = express();
+
+        app.listen(process.env.PORT, process.env.IP)
+
+        OR
+
+        var port = process.env.PORT || 3000;
+        app.listen(port, function () {
+            console.log("Server Has Started!");
+        });
+    }
+    routes {
+        app.get("<route>", function(request, response) {
+            //request has all the information about the request
+            //response has all the info about the given response
+        })
+    }
+}
+EJS {
+    What is? {
+        Embebbed Javascript
+    }
+    Why are we learning it? {
+        bc makes easier to exchange data between express and a html page
+    }
+    Example {
+        Part3/IntroToExpress/ThirdExpressApp/app.js
+    }
+    Tags {
+        <%= %> :: for html modification
+        <% %> :: for logic
+    }
+}
+Files {
+    Root folder {
+        node_modules {
+            [i.e.]express
+        }
+        public {
+            css files
+        }
+        views {
+            partials {
+                [i.e.]header
+                [i.e.]footer
+            }
+            pages
+        }
+        app.js
+        package.json
+        package-lock.json
+    }
+}
+API's formats {
+    APIs dont need to structure the information (like HTML does), they just need to send it.
+    JSON {
+        Javascript Object Notation.
+        Used to contain information.
+    }
+    XML {
+        Extended Markup Language.
+        Used to contain information.
+    }
+}
+Databases {
+    types {
+        SQL (relational) {
+            -uses tables
+            -SELECT * FROM students
+        }
+        noSQL (non-relational) {
+            -BSON
+            -modern syntaxis        
+        }        
+    }
+    mongoDB {
+        commands {
+            reference: https://docs.mongodb.com/manual/reference/mongo-shell/
+            mongod {
+                starts our mongodemon
+                from c directory
+            }
+            mongo {
+                starts mongo shell
+            }
+            help {
+                self explanatory
+            }
+            show dbs {
+                show databases
+            }
+            use <dbname> {
+                uses a specific database, if it doesn't exist, then it creates one and use it
+            }
+            insert {
+                db.<collectionName>.insert({js object}) :: insterts an object to a specific collection
+            }
+            find {
+                db.<collectionName>.find({js object attribute}) :: searchs within the db and retrieves the object that match
+                db.<collectionName>.find() :: shows every item inside the collection
+            }
+            update {
+                db.<collectionName>.update({where}, {new js object})
+                db.<collectionName>.update({where}, {$set: toChange/add})
+            }
+            remove {
+                db.<collectionName>.remove({where}) :: removes everything that matches
+                db.<collectionName>.remove({where}).limit(n) :: removes the first n matching items
+            }
+        }
+    }
+    mongoose {
+        what is? {
+            elegant mongodb object modeling for node,js
+        }
+        
+    }
+}
+
+ &apikey=thewdb

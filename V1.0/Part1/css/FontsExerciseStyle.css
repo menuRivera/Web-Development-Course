@@ -1,0 +1,40 @@
+/* font family */
+p{    
+    font-family: Georgia;
+}
+/* google fonts */
+h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+/* font-size */
+body{
+    font-size: 10px;
+}
+h1{
+    font-size: 5.0em;
+}
+p{
+    font-size: 2.0em;
+}
+
+/* font weigth */
+span{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+/* line heigth */
+p{
+    line-height: 1.5;
+}
+
+/* text align */
+h1{
+    text-align: right;
+}
+
+/* text decoration */
+#underline{
+    text-decoration: line-through;
+}

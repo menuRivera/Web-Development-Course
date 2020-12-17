@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML",
+		"workbench.colorCustomizations": {
+			// "statusBar.background": "#ccb800d7",
+			// "statusBar.foreground": "#ffffff"
+		},
+		"terminal.integrated.cwd": "E:\\Users\\Lenovo\\Documents\\Codes\\JS\\WebDevelopmentCourse\\V2.0",
+		"git.ignoreLimitWarning": true
+	}
+}
