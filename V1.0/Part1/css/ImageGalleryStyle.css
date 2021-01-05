@@ -3,7 +3,8 @@
 img{
     width: 30%;
     float: left;
-    margin:1.66%;
+    /* margin:1.66%;  */
+    margin: calc(10%/6);
 }
 p{
     font-family: 'Source Sans Pro', sans-serif;
