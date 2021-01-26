@@ -1,34 +1,60 @@
+html {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    /* background: -webkit-linear-gradient(to right, #335c67, #540b0e); */
+    background: linear-gradient(to right, #ffffff, #8798db);
+    margin: 0;
+    height: 100%;
 }
+
 img {
     width: auto;
     align-items: center;
+    border-radius: 5%;
 }
+
+#score {
+    font-size: 30px;
+}
+
 #goal {
     width: 50px;
     margin: 15px 0px;
 }
+
 #goalPlayerOne {
-    background-color:#335c67;
+    background-color: #335c67;
     color: white;
 }
+
 #goalPlayerTwo {
-    background-color:#540b0e;
+    background-color: #540b0e;
     color: white;
 }
+
 #reset {
     background-color: #e09f3e;
     color: white;
 }
+
+.winner {
+    color: green;
+}
+
 .container {
     margin-top: 50px;
-    padding: 5px;
+    border-radius: 5%;
+    padding: 15px;
     width: 30%;
-    /* border: 2px solid red;  */
+    border: 2px solid #335c67;
+    background-color: aliceblue;
 }
+
 .button {
     margin: 0px;
 }
-

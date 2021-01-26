@@ -3,6 +3,8 @@ const goalPlayerTwo = document.querySelector('#goalPlayerTwo');
 const playerOne = document.querySelector('#playerOne');
 const playerTwo = document.querySelector('#playerTwo');
 const reset = document.querySelector('#reset');
+const container = document.querySelector('.container');
+let isOver = false;
 
 const goal = document.querySelector('#goal');
 
@@ -10,20 +12,28 @@ let scorePlayerOne = 0;
 let scorePlayerTwo = 0;
 
 goalPlayerOne.addEventListener('click', () => {
-    playerOne.innerText = `${++scorePlayerOne}`;
-    checkWin();
+    if (!isOver) {
+        playerOne.innerText = `${++scorePlayerOne}`;
+        checkWin();
+    }
+
 });
 goalPlayerTwo.addEventListener('click', () => {
-    playerTwo.innerText = `${++scorePlayerTwo}`;
-    checkWin();
+    if (!isOver) {
+        playerTwo.innerText = `${++scorePlayerTwo}`;
+        checkWin();
+    }
+
 });
 
 function checkWin() {
-    if(scorePlayerOne >= goal.value) {
-        alert('Player One Wins!!');
+    if (scorePlayerOne == goal.value) {
+        playerOne.classList.add('winner');
+        isOver = true;
     }
-    else if(scorePlayerTwo >= goal.value) {
-        alert('Player Two Wins!!');
+    else if (scorePlayerTwo == goal.value) {
+        playerTwo.classList.add('winner');
+        isOver = true;
     }
 }
 
@@ -32,4 +42,7 @@ reset.addEventListener('click', () => {
     scorePlayerTwo = 0;
     playerOne.innerText = scorePlayerOne;
     playerTwo.innerText = scorePlayerTwo;
+    isOver = false;
+    playerOne.classList.remove('winner');
+    playerTwo.classList.remove('winner');
 });
