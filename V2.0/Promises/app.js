@@ -1,7 +1,7 @@
 // Promise syntax
 // new Promise((resolve, reject) => {
 //      resolve();
-// OR
+//  //OR
 //      reject();
 // }) 
 

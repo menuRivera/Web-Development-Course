@@ -1,3 +1,4 @@
+//#region Async functions
 async function hello() {
     return 'Hey there!';
 }
@@ -17,11 +18,11 @@ sing()
         return 'La la la';
     })
     .catch(err => {
-        return 'Error 3302';
+        return 'Error 3303';
     })
+//#endregion
 
-
-//Login fake demo
+//#region Login fake demo
 const login = async (username, password) => {
     if (!username || !password) throw 'Missing credentials';
     if (username === 'Manuel' && password === 'gordito123') return 'Welcome';
@@ -37,11 +38,9 @@ login('Manuel', 'gordito123')
         console.log('Error:');
         console.log(err);
     })
+//#endregion
 
-
-
-
-// delayed color change await
+//#region delayed color change await demo
 
 const delayedColorChange = (color, delay) => {
     return new Promise((resolve, reject) => {
@@ -52,6 +51,7 @@ const delayedColorChange = (color, delay) => {
     });
 }
 
+//instead of this:
 // delayedColorChange('red', 1000)
 //     .then(() => delayedColorChange('green', 1000))
 //     .then(() => delayedColorChange('blue', 1000))
@@ -59,6 +59,8 @@ const delayedColorChange = (color, delay) => {
 //     .catch(() => {
 //         console.log('Error');
 //     })
+
+//go with:
 
 async function rainbow() {
     await delayedColorChange('red', 1000);
@@ -76,3 +78,5 @@ const makeRaibow = async () => {
 }
 
 makeRaibow();
+
+//#endregion
