@@ -29,15 +29,22 @@ const login = async (username, password) => {
     throw 'Invalid password';
 }
 
-login('Manuel', 'gordito123')
-    .then(msg => {
-        console.log('Logged in:');
-        console.log(msg);
-    })
-    .catch(err => {
-        console.log('Error:');
-        console.log(err);
-    })
+// login('Manuel', 'gordito123')
+//     .then(msg => {
+//         console.log('Logged in: ', msg);
+//     })
+//     .catch(err => {
+//         console.log('Error: ', err);
+//     })
+
+async function setCredentials(username, password) {
+    try {
+        const response = await login(username, password);
+        console.log('Logged in: ', response);
+    } catch (error) {
+        console.log('Error: ', error);
+    }
+}
 //#endregion
 
 //#region delayed color change await demo
@@ -79,4 +86,34 @@ const makeRaibow = async () => {
 
 makeRaibow();
 
+//#endregion
+
+//#region Handling errors
+
+const fakeRequest = (url) => {
+    return new Promise((resolve, reject) => {
+        if (url === 'Google' || url === 'Facebook') {
+            resolve(`Here is the data received from: ${url}`)
+        }
+        else {
+            reject('We only know Google and Facebook urls');
+        }
+    });
+}
+
+function processResponse(response) {
+    console.log('Processing response...');
+    console.log('Response :', response);
+}
+
+async function makeTwoRequests(url1, url2) {
+    try {
+        const data1 = await fakeRequest(url1);
+        processResponse(data1);
+        const data2 = await fakeRequest(url2);
+        processResponse(data2);
+    } catch (e) {
+        console.log('Error: ', e);
+    }
+}
 //#endregion
