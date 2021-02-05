@@ -90,7 +90,7 @@ makeRaibow();
 
 //#region Handling errors
 
-const fakeRequest = (url) => {
+function fakeRequest(url) {
     return new Promise((resolve, reject) => {
         if (url === 'Google' || url === 'Facebook') {
             resolve(`Here is the data received from: ${url}`)
